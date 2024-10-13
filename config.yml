@@ -1,0 +1,39 @@
+llama:
+  api_endpoint: http://localhost:11434/api/generate
+  api_endpoint_405b: http://localhost:11434/api/generate
+  openai_endpoint: https://api.openai.com/v1/chat/completions
+
+
+confluence:
+  url: https://maersk-tools.atlassian.net/wiki
+  username: ${CONFLUENCE_USERNAME}
+  auth_token: ${CONFLUENCE_AUTH_TOKEN}
+
+api_integration:
+  token:
+    url: ${API_INTEGRATION_AUTH_TOKEN_URL}
+    client_id: ${API_INTEGRATION_CLIENT_ID}
+    secret: ${API_INTEGRATION_SECRET}
+azure:
+  client_id: ${CLIENT_ID}
+  tenant_id: ${TENANT_ID}
+  client_secret:  ${CLIENT_SECRET}
+  redirect_uri: http://localhost:8501
+  authority: https://login.microsoftonline.com/${TENANT_ID}
+  scopes: [ User.Read ]
+
+database:
+  url: "postgresql+psycopg2://termbiz_owner:rAIe4Ybdi1Zp@ep-shiny-math-a1mlqsmp.ap-southeast-1.aws.neon.tech/APMT-logistics?sslmode=require&sslrootcert=/etc/ssl/cert.pem"
+api_keys:
+  onedrive: ${ONE_DRIVE_API_KEY}
+  api_integration: ${API_INTEGRATION_KEY}
+  openai_api_key: ${OPENAI_API_KEY}
+
+models:
+  available_models:
+    - llama3.1
+    - openai
+
+other:
+  app_name: LLM Explorer
+  version: 1.0
