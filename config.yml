@@ -23,7 +23,7 @@ azure:
   scopes: [ User.Read ]
 
 database:
-  url: "postgresql+psycopg2://termbiz_owner:rAIe4Ybdi1Zp@ep-shiny-math-a1mlqsmp.ap-southeast-1.aws.neon.tech/APMT-logistics?sslmode=require&sslrootcert=/etc/ssl/cert.pem"
+  url: "postgresql+psycopg2://<username>:<password>@<hostname>/<dbname>?sslmode=require&sslrootcert=/etc/ssl/cert.pem"
 api_keys:
   onedrive: ${ONE_DRIVE_API_KEY}
   api_integration: ${API_INTEGRATION_KEY}
